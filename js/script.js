@@ -2,7 +2,7 @@ const slider = document.getElementById('transform-slider');
 const image = document.getElementById('transform-image');
 const label = document.getElementById('transform-label');
 
-const imageUrls = ['/Yoga/image/women8.jpg', '/Yoga/image/women9.jpg'];
+const imageUrls = ['image/women8.jpg', 'image/women9.jpg'];
 const labelTexts = ['До', 'После'];
 
 let currentImageIndex = 0;
