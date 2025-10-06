@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Slider logic
   const slider = document.getElementById('transform-slider');
   const image = document.getElementById('transform-image');
   const label = document.getElementById('transform-label');
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Mobile menu logic
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const burgerIcon = document.getElementById('burger-icon');
@@ -56,15 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('hidden');
       burgerIcon.classList.toggle('hidden');
       closeIcon.classList.toggle('hidden');
-      document.body.classList.toggle('overflow-hidden', !mobileMenu.classList.contains('hidden'));
+      document.body.classList.toggle(
+        'overflow-hidden',
+        !mobileMenu.classList.contains('hidden')
+      );
     }
   };
 
   if (mobileMenuButton) {
-      mobileMenuButton.addEventListener('click', toggleMenu);
+    mobileMenuButton.addEventListener('click', toggleMenu);
   }
 
-  mobileMenuLinks.forEach(link => {
+  mobileMenuLinks.forEach((link) => {
     link.addEventListener('click', () => {
       if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         toggleMenu();
@@ -72,12 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Button Clicks ---
   const downloadCourseBtn = document.getElementById('download-course-btn');
   const startPracticeBtn = document.getElementById('start-practice-btn');
   const startNowBtn = document.getElementById('start-now-btn');
 
-  const courseLink = 'https://docs.google.com/document/d/10o5X_CV322vUpl3h-30K4j_2o_2d5g6k/edit?usp=sharing&ouid=110974825923847896757&rtpof=true&sd=true';
+  const courseLink =
+    'https://docs.google.com/document/d/10o5X_CV322vUpl3h-30K4j_2o_2d5g6k/edit?usp=sharing&ouid=110974825923847896757&rtpof=true&sd=true';
 
   const openCourseLink = () => {
     window.open(courseLink, '_blank');
