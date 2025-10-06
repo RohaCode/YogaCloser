@@ -93,4 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
   if (startNowBtn) {
     startNowBtn.addEventListener('click', openCourseLink);
   }
+
+  const toTopBtn = document.getElementById('to-top-btn');
+
+  if (toTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        toTopBtn.classList.remove('hidden');
+      } else {
+        toTopBtn.classList.add('hidden');
+      }
+    });
+
+    toTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
 });
